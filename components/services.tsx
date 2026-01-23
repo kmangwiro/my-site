@@ -42,12 +42,12 @@ const services = [
 ]
 
 const hskLevels = [
-  { level: "HSK 1", words: "150", description: "Basic daily communication" },
-  { level: "HSK 2", words: "300", description: "Simple daily tasks" },
-  { level: "HSK 3", words: "600", description: "Daily life & travel" },
-  { level: "HSK 4", words: "1200", description: "Wide range of topics" },
-  { level: "HSK 5", words: "2500", description: "Chinese media & speeches" },
-  { level: "HSK 6", words: "5000+", description: "Native-level fluency" },
+  { level: "HSK 1", words: "3 months", description: "Basic daily communication" },
+  { level: "HSK 2", words: "3 months", description: "Simple daily tasks" },
+  { level: "HSK 3", words: "4 months", description: "Daily life & travel" },
+  { level: "HSK 4", words: "4 months", description: "Wide range of topics" },
+  { level: "HSK 5", words: "5 months", description: "Chinese media & speeches" },
+  { level: "HSK 6", words: "5 months", description: "Native-level fluency" },
 ]
 
 export function Services() {
