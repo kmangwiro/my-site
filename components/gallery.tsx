@@ -47,10 +47,10 @@ const galleryItems = [
 
 const successStories = [
   {
-    name: "Tendai Mhaka",
+    name: "Tanatswa Tizirai",
     achievement: "HSK 5 Certified",
     story: "Started from zero Chinese knowledge and achieved HSK 5 in just 2 years. Now working as a translator for a Chinese mining company.",
-    image: "/stories/tendai.jpg",
+    image: "/stories/tanatswa.jpeg",
   },
   {
     name: "Rudo Chigumba",

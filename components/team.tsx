@@ -10,20 +10,7 @@ const teamMembers = [
         image: "/team/tawanda.jpeg",
         specialties: ["HSK Training", "Chinese Language Education", "Leadership"],
     },
-    {
-        name: "Dr. Chen Wei",
-        role: "Senior Instructor",
-        bio: "PhD in Chinese Linguistics with 15+ years of teaching experience. Native Mandarin speaker.",
-        image: "/team/director.jpg",
-        specialties: ["HSK 5-6", "Business Chinese"],
-    },
-    {
-        name: "Tatenda Moyo",
-        role: "Language Coordinator",
-        bio: "Certified HSK instructor. Studied in Beijing for 5 years. Expert in beginner training.",
-        image: "/team/coordinator.jpg",
-        specialties: ["HSK 1-3", "Conversational"],
-    },
+
     {
         name: "Letwin Zimhindo",
         role: "Chinese Teacher",
@@ -56,8 +43,34 @@ const teamMembers = [
         name: "Runyararo Ndoro",
         role: "Chinese Teacher",
         bio: "Bachelors Degree in Substantive Laws (UZ), Certificate in Teaching Chinese to Speakers of Other Foreign Languages (Tianjin Normal University), Postgraduate Degree in Procedural Law (UZ pending).",
-        image: "/team/programs.jpg",
+        image: "/team/runyararo.jpeg",
         specialties: ["HSK Training", "Chinese for Legal Professionals"],
+    },
+    {
+        name: "Ronald Dume",
+        role: "Administrator | Portuguese Instructor",
+        bio: "Bachelor of Applied Arts (University of Zimbabwe), Certificate in HIV/AIDS Counselling (University of Zimbabwe).",
+        image: "/team/ronald.jpeg",
+        specialties: ["Administration", "Portuguese Language Training"],
+    },
+    {
+        name: "Kudzai Mangwiro",
+        role: "Information and Technology",
+        bio: "Bachelor degree in Data Science and Informatics (Midlands State University).",
+        image: "/team/kudzai.jpeg",
+        specialties: ["Digital Marketing", "Software Engineering"],
+    },
+    {
+        name: "",
+        role: "Caretaker",
+        image: "/team/gogo.jpeg",
+        specialties: ["Caretaker"],
+    },
+    {
+        name: "",
+        role: "Caretaker",
+        image: "/team/sekuru.jpeg",
+        specialties: ["Caretaker"],
     },
 ]
 
