@@ -10,7 +10,7 @@ const playfair = Playfair_Display({ subsets: ["latin"], variable: '--font-playfa
 
 export const metadata: Metadata = {
   title: 'Zimgro Consultancy | Learn Chinese & Foreign Languages',
-  description: 'Zimgro Consultancy offers professional Chinese and foreign language courses, HSK certification training, travel and tours, and career opportunities in Harare, Zimbabwe.',
+  description: 'Zimgro Consultancy offers professional Chinese language, HSK certification training, travel and tours, and career opportunities in Harare, Zimbabwe.',
   generator: 'v0.app',
   keywords: ['Chinese language', 'HSK', 'language courses', 'Zimbabwe', 'Harare', 'interpreters', 'foreign languages'],
   icons: {
