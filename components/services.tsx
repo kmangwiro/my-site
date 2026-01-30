@@ -32,7 +32,7 @@ const services = [
         icon: BookOpen,
         title: "Foreign Language Training",
         description:
-            "Learn other foreign languages with our experienced instructors. Perfect for personal growth or career advancement.",
+            "Learn other foreign languages with our experienced instructors, perfect for personal growth or career advancement. Apart from Chinese, it is also important to note that Zimgro offers other languages such as Portuguese, French, and German, but only on a one-on-one basis. ",
         features: ["Multiple Languages", "Certified Instructors", "Flexible Schedules"],
     },
     {
@@ -40,7 +40,7 @@ const services = [
         title: "HSK Certification",
         description:
             "Official HSK test preparation and certification for all levels, from beginner to advanced.",
-        features: ["Official Test Centre", "Mock Exams", "Study Materials"],
+        features: ["Official Test Centre","Study Materials"],
     },
     {
         icon: Plane,
@@ -69,14 +69,14 @@ const services = [
    HSK STRUCTURED DATA
 ========================= */
 
-// Card 1 – Exam Timeline
+// Exam Timeline
 const examTimeline = {
     registration: "19 Jan – 10 Feb",
     examDate: "22 March",
     results: "Approximately 1 month after the exam",
 };
 
-// Card 2 – Examination Fees
+// Examination Fees
 const examFees = [
     {level: "HSK 1", fee: "$15"},
     {level: "HSK 2", fee: "$25"},
@@ -86,36 +86,32 @@ const examFees = [
     {level: "HSK 6", fee: "$65"},
 ];
 
-// Card 3 – Semester Fees
-const semesterFees = [
-    {level: "HSK 1", fee: "$205 + $15 enrolment"},
-    {level: "HSK 2", fee: "$220"},
-    {level: "HSK 3", fee: "$230"},
-    {level: "HSK 4", fee: "$240"},
-    {level: "HSK 5", fee: "$250"},
-    {level: "HSK 6", fee: "$260"},
-];
-
-// Card 4 – Level Explanation
+// Level Structure
 const levelStructure = [
     {
         title: "Elementary Level",
-        levels: "HSK 1 – HSK 2",
-        duration: "1 Semester (≈ 3 months)",
+        levels: [
+            {level: "HSK 1", duration: "1 Semester (≈ 3 months)"},
+            {level: "HSK 2", duration: "1 Semester (≈ 3 months)"},
+        ],
         description:
             "Covers basic pronunciation, daily conversations, and simple sentence structures.",
     },
     {
         title: "Intermediate Level",
-        levels: "HSK 3 – HSK 4",
-        duration: "2 Semesters",
+        levels: [
+            {level: "HSK 3", duration: "2 Semester"},
+            {level: "HSK 4", duration: "2 Semester"},
+        ],
         description:
             "Focuses on grammar accuracy, reading comprehension, and practical communication.",
     },
     {
         title: "Advanced Level",
-        levels: "HSK 5 – HSK 6",
-        duration: "2+ Semesters",
+        levels: [
+            {level: "HSK 5", duration: "2 Semester"},
+            {level: "HSK 6", duration: "2 Semester"},
+        ],
         description:
             "Advanced reading, writing, professional and academic Chinese proficiency.",
     },
@@ -132,15 +128,11 @@ export function Services() {
 
                 {/* ===== Section Header ===== */}
                 <div className="text-center mb-16">
-                    <Badge className="bg-gold/20 text-gold-dark mb-4">
-                        Our Services
-                    </Badge>
-                    <h2 className="text-3xl sm:text-4xl font-serif font-bold mb-4">
-                        Our Services
-                    </h2>
+                    <Badge className="bg-gold/20 text-gold-dark mb-4">Our Services</Badge>
+                    <h2 className="text-3xl sm:text-4xl font-serif font-bold mb-4">Our Services</h2>
                     <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
                         Zimgro Consultancy offers structured language training, official HSK
-                        certification, cultural experiences, and professional services.
+                        certification, translation and interpretation services.
                     </p>
                 </div>
 
@@ -149,21 +141,22 @@ export function Services() {
                     {services.map((service) => (
                         <Card
                             key={service.title}
-                            className="hover:border-gold/50 hover:shadow-lg transition-all"
+                            className="rounded-2xl bg-gray-200 border border-gray-300 shadow-md hover:shadow-xl transition-shadow"
                         >
-                            <CardHeader>
-                                <div className="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center mb-4">
-                                    <service.icon className="h-6 w-6 text-gold-dark"/>
+                            <CardHeader className="flex flex-col items-center text-center">
+                                <div
+                                    className="w-16 h-16 rounded-full bg-gold/20 flex items-center justify-center mb-4">
+                                    <service.icon className="h-8 w-8 text-black"/>
                                 </div>
-                                <CardTitle>{service.title}</CardTitle>
-                                <CardDescription>
+                                <CardTitle className="text-lg font-bold text-black">{service.title}</CardTitle>
+                                <CardDescription className="text-black/80 text-sm mt-1">
                                     {service.description}
                                 </CardDescription>
                             </CardHeader>
                             <CardContent>
-                                <div className="flex flex-wrap gap-2">
+                                <div className="flex flex-wrap justify-center gap-2 mt-2">
                                     {service.features.map((feature) => (
-                                        <Badge key={feature} variant="secondary">
+                                        <Badge key={feature} variant="secondary" className="text-black bg-gray-300/50">
                                             {feature}
                                         </Badge>
                                     ))}
@@ -173,6 +166,7 @@ export function Services() {
                     ))}
                 </div>
 
+
                 {/* ===== HSK INFORMATION CARDS ===== */}
                 <div className="bg-coffee rounded-3xl p-8 sm:p-12">
 
@@ -181,44 +175,34 @@ export function Services() {
                             HSK Program Information
                         </h3>
                         <p className="text-white/70 max-w-2xl mx-auto">
-                            Clear, structured information on HSK exams, fees, semesters, and
-                            proficiency levels.
+                            Clear, structured information on HSK exams, fees, and proficiency levels.
                         </p>
                     </div>
 
-                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
                         {/* Card 1 – Dates */}
-                        <Card className="bg-white/5 border border-white/10">
+                        <Card
+                            className="h-full rounded-2xl border border-gold/30 bg-white/5 shadow-md hover:shadow-xl transition-shadow">
                             <CardHeader>
-                                <CardTitle className="text-gold">Exam Dates</CardTitle>
-                                <CardDescription className="text-white/70">
-                                    Official HSK timeline
-                                </CardDescription>
+                                <CardTitle className="text-gold text-lg font-bold">Exam Dates</CardTitle>
+                                <CardDescription className="text-white/70 text-sm">Official HSK
+                                    timeline</CardDescription>
                             </CardHeader>
                             <CardContent className="space-y-2 text-white/80 text-sm">
-                                <div>
-                                    <span className="font-semibold">Registration:</span>{" "}
-                                    {examTimeline.registration}
+                                <div><span className="font-semibold">Registration:</span> {examTimeline.registration}
                                 </div>
-                                <div>
-                                    <span className="font-semibold">Exam Date:</span>{" "}
-                                    {examTimeline.examDate}
-                                </div>
-                                <div>
-                                    <span className="font-semibold">Results:</span>{" "}
-                                    {examTimeline.results}
-                                </div>
+                                <div><span className="font-semibold">Exam Date:</span> {examTimeline.examDate}</div>
+                                <div><span className="font-semibold">Results:</span> {examTimeline.results}</div>
                             </CardContent>
                         </Card>
 
                         {/* Card 2 – Exam Fees */}
-                        <Card className="bg-white/5 border border-white/10">
+                        <Card
+                            className="h-full rounded-2xl border border-gold/30 bg-white/5 shadow-md hover:shadow-xl transition-shadow">
                             <CardHeader>
-                                <CardTitle className="text-gold">Examination Fees</CardTitle>
-                                <CardDescription className="text-white/70">
-                                    Official exam fees
-                                </CardDescription>
+                                <CardTitle className="text-gold text-lg font-bold">Examination Fees</CardTitle>
+                                <CardDescription className="text-white/70 text-sm">Official exam fees</CardDescription>
                             </CardHeader>
                             <CardContent className="space-y-1 text-white/80 text-sm">
                                 {examFees.map((item) => (
@@ -227,51 +211,30 @@ export function Services() {
                                         <span className="font-semibold">{item.fee}</span>
                                     </div>
                                 ))}
+                                <div className="text-white/70 mt-2 p-2 bg-gold/20 rounded text-xs">
+                                    Note: An additional $5 administrative fee applies to all registrations.
+                                </div>
                             </CardContent>
                         </Card>
 
-                        {/* Card 3 – Semester Fees */}
-                        <Card className="bg-white/5 border border-white/10">
-                            <CardHeader>
-                                <CardTitle className="text-gold">Semester Fees</CardTitle>
-                                <CardDescription className="text-white/70">
-                                    Tuition per level
-                                </CardDescription>
-                            </CardHeader>
-                            <CardContent className="space-y-1 text-white/80 text-sm">
-                                {semesterFees.map((item) => (
-                                    <div key={item.level} className="flex justify-between">
-                                        <span>{item.level}</span>
-                                        <span className="font-semibold">{item.fee}</span>
-                                    </div>
-                                ))}
-                            </CardContent>
-                        </Card>
-
-                        {/* Card 4 – Structure */}
-                        <Card className="bg-white/5 border border-white/10">
-                            <CardHeader>
-                                <CardTitle className="text-gold">
-                                    Program Structure
-                                </CardTitle>
-                                <CardDescription className="text-white/70">
-                                    Level breakdown
-                                </CardDescription>
-                            </CardHeader>
-                            <CardContent className="space-y-4 text-white/80 text-sm">
-                                {levelStructure.map((level) => (
-                                    <div key={level.title}>
-                                        <div className="font-semibold text-white">
-                                            {level.title}
+                        {/* Cards 3-5 – Program Structure split by Level */}
+                        {levelStructure.map((level) => (
+                            <Card key={level.title}
+                                  className="h-full rounded-2xl border border-gold/30 bg-white/5 shadow-md hover:shadow-xl transition-shadow">
+                                <CardHeader>
+                                    <CardTitle className="text-gold text-lg font-bold">{level.title}</CardTitle>
+                                    <CardDescription className="text-white/70 text-sm">Level breakdown</CardDescription>
+                                </CardHeader>
+                                <CardContent className="space-y-2 text-white/80 text-sm">
+                                    {level.levels.map((lvl) => (
+                                        <div key={lvl.level} className="text-white/70">
+                                            {lvl.level} – {lvl.duration}
                                         </div>
-                                        <div className="text-white/70">{level.levels}</div>
-                                        <div className="text-white/60">
-                                            {level.duration}
-                                        </div>
-                                    </div>
-                                ))}
-                            </CardContent>
-                        </Card>
+                                    ))}
+                                    <div className="text-white/60">{level.description}</div>
+                                </CardContent>
+                            </Card>
+                        ))}
 
                     </div>
                 </div>
