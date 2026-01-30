@@ -72,6 +72,34 @@ const galleryItems = [
 ]
 
 /* =========================
+   SUCCESS STORIES
+========================= */
+
+const successStories = [
+  {
+    name: "Tanatswa Tizirai",
+    achievement: "HSK 5 Certified",
+    story:
+      "Tanatswa began his journey working as a security guard in Harare before enrolling with ZIMGRO Language Consultancy. Through dedication and consistent study, he successfully completed HSK Level 4 and later advanced to HSK 5. With ZIMGRO’s guidance and career support, he secured a professional role as a Chinese language translator.",
+    image: "/stories/tanatswa.jpeg",
+  },
+  {
+    name: "Trust Majaura",
+    achievement: "Professional Chinese Interpreter",
+    story:
+      "Trust joined ZIMGRO Language Consultancy with a clear goal of mastering Chinese. After completing HSK Level 5 and receiving continuous mentorship, he secured a full-time position as a Chinese interpreter at the Chinese Embassy.",
+    image: "/stories/trust.jpeg",
+  },
+  {
+    name: "Kudakwashe Mbizi",
+    achievement: "HSK 6 Graduate",
+    story:
+      "Kudakwashe completed advanced Chinese language training and achieved HSK Level 6. With ZIMGRO’s support, he secured a professional role working closely with Chinese professionals in business environments.",
+    image: "/stories/kuda.jpeg",
+  },
+]
+
+/* =========================
    COMPONENT
 ========================= */
 
@@ -103,8 +131,6 @@ export function Gallery() {
               }`}
             >
               <div className={`relative ${index === 0 ? "aspect-square" : "aspect-video"}`}>
-
-                {/* IMAGE OR VIDEO */}
                 {item.type === "video" ? (
                   <video
                     src={item.src}
@@ -124,10 +150,8 @@ export function Gallery() {
                   />
                 )}
 
-                {/* OVERLAY */}
                 <div className="absolute inset-0 bg-navy/40 opacity-0 group-hover:opacity-100 transition-opacity" />
 
-                {/* PLAY BUTTON */}
                 {item.type === "video" && (
                   <button
                     onClick={() => setSelectedVideo(item.src)}
@@ -139,7 +163,6 @@ export function Gallery() {
                   </button>
                 )}
 
-                {/* CATEGORY BADGE */}
                 <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-navy/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
                   <Badge className="bg-gold text-navy">{item.category}</Badge>
                 </div>
@@ -147,9 +170,50 @@ export function Gallery() {
             </div>
           ))}
         </div>
+
+        {/* ===== Success Stories ===== */}
+        <div className="bg-card rounded-3xl p-8 sm:p-12 border border-border">
+          <div className="text-center mb-12">
+            <h3 className="text-2xl sm:text-3xl font-serif font-bold text-foreground mb-4">
+              Success Stories
+            </h3>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Our students achieve remarkable results. Here are some of their inspiring stories.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {successStories.map((story) => (
+              <div
+                key={story.name}
+                className="bg-secondary rounded-xl p-6 hover:shadow-lg transition-shadow"
+              >
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-40 h-40 rounded-full overflow-hidden relative bg-muted">
+                    <Image
+                      src={story.image}
+                      alt={story.name}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-foreground">{story.name}</h4>
+                    <p className="text-gold-dark text-sm font-medium">
+                      {story.achievement}
+                    </p>
+                  </div>
+                </div>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {story.story}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
 
-      {/* ===== VIDEO MODAL ===== */}
+      {/* ===== Video Modal ===== */}
       {selectedVideo && (
         <div className="fixed inset-0 z-50 bg-navy/90 flex items-center justify-center p-4">
           <div className="relative w-full max-w-4xl">
