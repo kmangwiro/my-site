@@ -12,27 +12,7 @@ import { Button } from "@/components/ui/button"
 ========================= */
 
 const galleryItems = [
-  {
-    id: "vid-3",
-    type: "video",
-    src: "/videos/graduation.mp4",
-    alt: "Graduation ceremony",
-    category: "Videos",
-  },
-  {
-    id: "vid-2",
-    type: "video",
-    src: "/videos/classroom.mp4",
-    alt: "Classroom session",
-    category: "Videos",
-  },
-  {
-    id: "vid-1",
-    type: "video",
-    src: "/videos/zimgro-admin.mp4",
-    alt: "Campus tour",
-    category: "Videos",
-  },
+
   {
     type: "image",
     src: "/gallery/gall5.jpeg",
