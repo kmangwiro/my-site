@@ -6,28 +6,6 @@ import Link from "next/link"
 
 const vacancies = [
   {
-    title: "Chinese-English Translator",
-    company: "Zimbabwe Mining Corp",
-    location: "Harare, Zimbabwe",
-    type: "Full-time",
-    salary: "$800 - $1,200/month",
-    requirements: ["HSK 4+", "English Fluency", "2+ years experience"],
-    description: "Seeking qualified translator for mining operations with Chinese partners. Must be able to translate technical documents and interpret during meetings.",
-    isNew: true,
-    forAlumni: true,
-  },
-  {
-    title: "Mandarin Teacher",
-    company: "International School of Harare",
-    location: "Harare, Zimbabwe",
-    type: "Full-time",
-    salary: "$600 - $900/month",
-    requirements: ["HSK 5+", "Teaching Certificate", "Native/Fluent"],
-    description: "Teaching Mandarin to primary and secondary school students. Experience with young learners preferred.",
-    isNew: true,
-    forAlumni: true,
-  },
-  {
     title: "Interpreter - Construction",
     company: "Sino-Zim Construction",
     location: "Bulawayo, Zimbabwe",

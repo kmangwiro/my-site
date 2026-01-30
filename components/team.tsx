@@ -69,14 +69,6 @@ const teamMembers = [
     },
     {
         id: 9,
-        name: "Ronald Dume",
-        role: "Administrator | Portuguese Instructor",
-        bio: "Bachelor of Applied Arts (University of Zimbabwe), Certificate in HIV/AIDS Counselling (University of Zimbabwe).",
-        image: "/team/ronald.jpeg",
-        specialties: ["Administration", "Portuguese Language Training"],
-    },
-    {
-        id: 10,
         name: "Kudzai Mangwiro",
         role: "Information and Technology",
         bio: "Bachelor degree in Data Science and Informatics (Midlands State University).",
@@ -84,14 +76,14 @@ const teamMembers = [
         specialties: ["Digital Marketing", "Software Engineering"],
     },
     {
-        id: 11,
+        id: 10,
         name: "Gogo Zimhindo",
         role: "Caretaker",
         image: "/team/gogo.jpeg",
         specialties: ["Caretaker"],
     },
     {
-        id: 12,
+        id: 11,
         name: "Sekuru Zimhindo",
         role: "Caretaker",
         image: "/team/sekuru.jpeg",
