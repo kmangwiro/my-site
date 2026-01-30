@@ -57,14 +57,14 @@ export function Hero() {
               <Link href="#services">Explore Services</Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="border-gold text-gold hover:bg-gold hover:text-coffee-dark font-semibold text-base px-8 bg-transparent">
-              <Link href="#contact">Contact Us</Link>
+              <Link href="#contact">Enroll with Us</Link>
             </Button>
           </div>
 
           {/* Stats */}
           <div className="grid grid-cols-3 gap-6 mt-12 pt-8 border-t border-white/10 max-w-lg mx-auto">
             <div className="text-center">
-              <div className="text-3xl font-bold text-gold">500+</div>
+              <div className="text-3xl font-bold text-gold">1,500+</div>
               <div className="text-sm text-white/60">Students Trained</div>
             </div>
             <div className="text-center">
@@ -73,7 +73,7 @@ export function Hero() {
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-gold">6</div>
-              <div className="text-sm text-white/60">HSK Levels</div>
+              <div className="text-sm text-white/60">Chinese proficiency Levels</div>
             </div>
           </div>
         </div>
