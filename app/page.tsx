@@ -2,7 +2,7 @@ import { Header } from "@/components/header"
 import { Hero } from "@/components/hero"
 import { Services } from "@/components/services"
 import { Team } from "@/components/team"
-import { Gallery } from "@/components/gallery"
+import { GalleryClient } from "@/components/gallery-client"
 import { Vacancies } from "@/components/vacancies"
 import { Contact } from "@/components/contact"
 import { Footer } from "@/components/footer"
@@ -14,7 +14,7 @@ export default function Home() {
       <Hero />
       <Services />
       <Team />
-      <Gallery />
+      <GalleryClient />
       <Vacancies />
       <Contact />
       <Footer />
