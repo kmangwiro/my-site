@@ -15,7 +15,7 @@ const teamMembers = [
         id: 2,
         name: "Letwin Zimhindo",
         role: "Chinese Teacher",
-        bio: "Masters in Teaching Chinese (Qingdao University), Diploma in Economics (Tianjin Daxue), Degree in Business Management (MSU Zimbabwe).",
+        bio: "Certificate in Teaching Chinese (Qingdao University), Diploma in Economics (Tianjin Daxue), Degree in Business Management (MSU Zimbabwe).",
         image: "/team/let.jpeg",
         specialties: ["HSK Training", "Business Chinese"],
     },

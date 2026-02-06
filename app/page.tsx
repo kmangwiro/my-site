@@ -3,7 +3,7 @@ import { Hero } from "@/components/hero"
 import { Services } from "@/components/services"
 import { Team } from "@/components/team"
 import { GalleryClient } from "@/components/gallery-client"
-import { Vacancies } from "@/components/vacancies"
+import { Vacancies, UpcomingEvents } from "@/components/vacancies"
 import { Contact } from "@/components/contact"
 import { Footer } from "@/components/footer"
 
@@ -15,7 +15,13 @@ export default function Home() {
       <Services />
       <Team />
       <GalleryClient />
+
+      {/* Jobs */}
       <Vacancies />
+
+      {/* Events (just below vacancies) */}
+      <UpcomingEvents />
+
       <Contact />
       <Footer />
     </main>
