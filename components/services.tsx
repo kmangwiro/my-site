@@ -253,7 +253,7 @@ export function Services() {
                 {/* =========================
                  REGISTRATION FORM (OUTSIDE HSK INFO CARD)
                 ========================= */}
-                <div className="max-w-5xl mx-auto mb-20">
+                <div className="max-w-7xl mx-auto mb-20">
   <div className="bg-coffee rounded-3xl p-8 sm:p-12 shadow-lg">
     <div className="text-center mb-8">
       <h3 className="text-2xl sm:text-3xl font-serif font-bold text-white mb-3">
