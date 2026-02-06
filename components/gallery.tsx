@@ -1,11 +1,7 @@
 "use client"
 
-import { useState } from "react"
 import Image from "next/image"
-import { Play, X } from "lucide-react"
-
 import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
 
 /* =========================
    OUR JOURNEY — PICTURES
@@ -17,15 +13,6 @@ const journeyPictures = [
   { src: "/gallery/rena1.jpeg", alt: "Student testimonials", category: "Testimonials" },
   { src: "/gallery/laho1.jpeg", alt: "Evening class", category: "Evening Class" },
   { src: "/gallery/gall3.jpeg", alt: "Chinese calligraphy workshop", category: "Workshops" },
-]
-
-/* =========================
-   OUR JOURNEY — VIDEOS
-========================= */
-const journeyVideos = [
-  { src: "/gallery/characters.mp4", category: "Classroom Life" },
-  { src: "/gallery/group-class.mp4", category: "Cultural Events" },
-  { src: "/gallery/students.mp4", category: "Graduation Day" },
 ]
 
 /* =========================
@@ -56,20 +43,9 @@ const successStories = [
 ]
 
 /* =========================
-   SUCCESS STORIES — VIDEOS
-========================= */
-const successVideos = [
-  { src: "/videos/tkay.mp4", category: "Tanatswa Tizirai" },
-  { src: "/videos/student2.mp4", category: "Ulysse Zirereze" },
-  { src: "/videos/TanatswaMadura.mp4", category: "Tanatswa Madura" },
-]
-
-/* =========================
    COMPONENT
 ========================= */
 export function Gallery() {
-  const [selectedVideo, setSelectedVideo] = useState<string | null>(null)
-
   return (
     <section id="gallery" className="py-20 bg-secondary">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -106,35 +82,6 @@ export function Gallery() {
               </div>
             ))}
           </div>
-
-          {/* Journey Videos */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {journeyVideos.map((video, index) => (
-              <div key={index} className="relative group rounded-xl overflow-hidden">
-                <div className="relative aspect-video">
-                  <video
-                    src={video.src}
-                    className="object-contain w-full h-full group-hover:scale-105 transition-transform duration-300"
-                    muted
-                    playsInline
-                    preload="metadata"
-                  />
-                  <div className="absolute inset-0 bg-navy/50 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  <button
-                    onClick={() => setSelectedVideo(video.src)}
-                    className="absolute inset-0 flex items-center justify-center"
-                  >
-                    <div className="w-16 h-16 rounded-full bg-gold flex items-center justify-center shadow-lg">
-                      <Play className="h-8 w-8 text-navy ml-1" />
-                    </div>
-                  </button>
-                  <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-navy/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
-                    <Badge className="bg-gold text-navy">{video.category}</Badge>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
 
         {/* ================= SUCCESS STORIES ================= */}
@@ -164,58 +111,8 @@ export function Gallery() {
               </div>
             ))}
           </div>
-
-          {/* Success Videos — EXACTLY LIKE Journey Videos */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-16">
-            {successVideos.map((video, index) => (
-              <div key={index} className="relative group rounded-xl overflow-hidden">
-                <div className="relative aspect-video">
-                  <video
-                    src={video.src}
-                    className="object-contain w-full h-full group-hover:scale-105 transition-transform duration-300"
-                    muted
-                    playsInline
-                    preload="metadata"
-                  />
-                  <div className="absolute inset-0 bg-navy/50 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  <button
-                    onClick={() => setSelectedVideo(video.src)}
-                    className="absolute inset-0 flex items-center justify-center"
-                  >
-                    <div className="w-16 h-16 rounded-full bg-gold flex items-center justify-center shadow-lg">
-                      <Play className="h-8 w-8 text-navy ml-1" />
-                    </div>
-                  </button>
-                  <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-navy/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
-                    <Badge className="bg-gold text-navy">{video.category}</Badge>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
 
-        {/* VIDEO MODAL — SAME FOR BOTH Journey and Success Videos */}
-        {selectedVideo && (
-          <div className="fixed inset-0 z-50 bg-navy/90 flex items-center justify-center p-4">
-            <div className="relative w-full max-w-4xl aspect-video">
-              <Button
-                variant="ghost"
-                size="icon"
-                className="absolute -top-12 right-0 text-white hover:bg-white/20"
-                onClick={() => setSelectedVideo(null)}
-              >
-                <X className="h-6 w-6" />
-              </Button>
-              <video
-                src={selectedVideo}
-                controls
-                autoPlay
-                className="w-full h-full rounded-xl object-contain"
-              />
-            </div>
-          </div>
-        )}
       </div>
     </section>
   )
