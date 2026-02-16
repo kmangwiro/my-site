@@ -90,7 +90,7 @@ export function Contact() {
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Form */}
           <div className="bg-card rounded-2xl p-8 border border-border">
-            <h3 className="text-xl font-semibold text-foreground mb-6">Send us a message</h3>
+            <h3 className="text-xl font-semibold text-foreground mb-6">Send an email</h3>
             <form
               action="https://formspree.io/f/YOUR_FORM_ID"
               method="POST"

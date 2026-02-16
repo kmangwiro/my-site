@@ -42,15 +42,15 @@ const upcomingEvents = [
 
     {
         title: "Alumni Career Opportunities Talk Day",
-        date: "February 25, 2026",
-        time: "5:30 PM – 7:30 PM",
+        date: "To Be Announced",
+        time: "To Be Announced",
         location: "Harare, Zimbabwe",
         description:
             "An interactive session exploring how Chinese language skills open doors to global career opportunities.",
     },
     {
         title: "Enrollment for the Next Semester",
-        date: "To Be Announced",
+        date: "30 March 2026",
         time: "Office Hours",
         location: "Zimgro Chinese Language Center",
         description:
