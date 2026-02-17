@@ -51,7 +51,7 @@ const upcomingEvents = [
     {
         title: "Enrollment for the Next Semester",
         date: "30 March 2026",
-        time: "Office Hours",
+        time: "08.00 - 7.30",
         location: "Zimgro Chinese Language Center",
         description:
             "Open enrollment period for new and continuing students for the upcoming semester.",
@@ -68,7 +68,7 @@ const upcomingEvents = [
         title: "Semester Examination Period",
         date: "March 22, 2026",
         time: "As Scheduled",
-        location: "Zimgro Chinese Language Center",
+        location: "University of Zimbabwe",
         description:
             "End-of-semester examinations for enrolled Chinese language programs.",
     },
@@ -82,7 +82,7 @@ const upcomingEvents = [
     },
     {
         title: "Zimgro Anniversary Celebration",
-        date: "To Be Announced",
+        date: "The Second Saturday of December",
         time: "To Be Announced",
         location: "Zimgro Chinese Language Center",
         description:
