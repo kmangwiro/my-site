@@ -45,7 +45,7 @@ const successStories = [
         name: "Moreblessing Mapanzure",
         achievement: "HSK 4 Graduate",
         story:
-            "At ZIMGRO, Moreblessing Mapunzure completed advanced Chinese language training and earned HSK Level 4 certification. She was subsequently employed by a Chinese firm, where she collaborates with Chinese professionals and regularly travels between Zimbabwe and China to support business operations and strengthen bilateral engagement.",
+            "At ZIMGRO, Moreblessing Mapunzure completed Chinese language training and earned HSK Level 4 certification. She was subsequently employed by a Chinese firm, where she collaborates with Chinese professionals and regularly travels between Zimbabwe and China to support business operations and strengthen bilateral engagement.",
         image: "/stories/moreblessing001.jpeg",
     },
     {
@@ -66,7 +66,7 @@ const successStories = [
         name: "Tanatswa Madura",
         achievement: "HSK 4 Graduate",
         story:
-            "Tanatswa Madura successfully completed advanced Chinese language training and earned HSK Level 4 certification. Through the dedicated support and mentorship of ZIMGRO, he secured full-time professional employment, marking a significant milestone in his career and exemplifying the power of discipline and opportunity.",
+            "Tanatswa Madura successfully completed Chinese language training and earned HSK Level 4 certification. Through the dedicated support and mentorship of ZIMGRO, he secured full-time professional employment, marking a significant milestone in his career and exemplifying the power of discipline and opportunity.",
         image: "/stories/tanatswaMadura.jpeg",
     },
     {
